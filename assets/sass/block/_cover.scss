@@ -1,0 +1,46 @@
+@use '../foundation/variables'as v;
+
+.cover {
+  &-container {
+    text-align: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include v.mq() {
+      height: 100vh;
+    }
+  }
+
+  &-title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+    letter-spacing: .3em;
+    color: v.$c-main;
+
+    @include v.mq() {
+      @include v.rem(48);
+    }
+  }
+
+  &-catch,
+  &-text {
+    @include v.rem(14);
+
+    @include v.mq() {
+      @include v.rem(16);
+    }
+  }
+
+
+  .js-fadein {
+    opacity: 0;
+    transition: all 5s;
+
+    &-show {
+      opacity: 1;
+    }
+  }
+}
