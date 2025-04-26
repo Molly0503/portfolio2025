@@ -6,6 +6,7 @@
     position: relative;
     padding: 25px;
 
+
     @include v.mq() {
       padding: 50px;
     }
@@ -47,10 +48,13 @@
     color: v.$c-white;
     line-height: 1.2;
 
-
     @include v.mq() {
       padding-inline: 24px;
       @include v.rem(24);
+    }
+
+    &-right {
+      align-items: flex-end;
     }
 
     .small {
