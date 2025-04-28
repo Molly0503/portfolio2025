@@ -3,16 +3,16 @@
 .works {
 
   &-item {
-    position: relative;
     padding: 25px;
-
-
+    
     @include v.mq() {
       padding: 50px;
     }
   }
-
+  
   img {
+    position: relative;
+    margin-inline: auto;
     border-radius: 12px;
     box-shadow: 5px 5px 5px 0 v.$c-sub;
 
@@ -23,7 +23,7 @@
 
   &-catch {
     position: absolute;
-    right: 4px;
+    right: 0;
     bottom: 36px;
     display: flex;
     flex-direction: column;
