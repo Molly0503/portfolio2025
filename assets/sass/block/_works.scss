@@ -11,10 +11,10 @@
   }
   
   img {
-    position: relative;
-    margin-inline: auto;
     border-radius: 12px;
     box-shadow: 5px 5px 5px 0 v.$c-sub;
+    position: relative;
+    margin-inline: auto;
 
     @include v.mq() {
       border-radius: 25px;

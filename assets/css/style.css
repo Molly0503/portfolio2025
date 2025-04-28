@@ -246,10 +246,10 @@ h2::before, h2::after {
   }
 }
 .works img {
-  position: relative;
-  margin-inline: auto;
   border-radius: 12px;
   box-shadow: 5px 5px 5px 0 #888;
+  position: relative;
+  margin-inline: auto;
 }
 @media screen and (min-width: 768px) {
   .works img {
@@ -440,14 +440,9 @@ h2::before, h2::after {
   }
 }
 .about .st > .tab-content img {
-  width: 50%;
+  width: 200px;
   height: auto;
   border-radius: 50%;
-}
-@media screen and (min-width: 768px) {
-  .about .st > .tab-content img {
-    width: 25%;
-  }
 }
 .about-top {
   margin-bottom: 8px;

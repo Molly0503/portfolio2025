@@ -83,12 +83,9 @@
     }
 
     img {
-      width: 50%;
+      width: 200px;
       height: auto;
       border-radius: 50%;
-      @include v.mq() {
-        width: 25%;
-      }
     }
   }
   &-top {
