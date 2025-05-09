@@ -65,11 +65,13 @@
         flex-direction: column;
         align-items: center;
         row-gap: 36px;
-        
+        @include v.rem(14);
+
         @include v.mq() {
           flex-direction: row;
           align-items: flex-start;
           column-gap: 24px;
+          @include v.rem(16);
         }
       }
 
@@ -88,8 +90,10 @@
       border-radius: 50%;
     }
   }
+
   &-top {
     margin-bottom: 8px;
+
     .en {
       font-family: v.$f-en;
     }

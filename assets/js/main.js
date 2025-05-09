@@ -65,5 +65,5 @@ $('.fade-in-up').waypoint({
       $('.fade-in-up').addClass("animate__fadeInUp");
     }
   },
-  offset: '85%',
+  offset: '90%',
 });

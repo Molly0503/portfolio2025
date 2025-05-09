@@ -199,7 +199,7 @@ h2::before, h2::after {
 
 .cover-container {
   text-align: center;
-  height: 60vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -422,6 +422,7 @@ h2::before, h2::after {
   flex-direction: column;
   align-items: center;
   row-gap: 36px;
+  font-size: 0.875rem;
 }
 @media screen and (min-width: 768px) {
   .about .st > .tab-content .tab-inner {
@@ -429,6 +430,7 @@ h2::before, h2::after {
     align-items: flex-start;
     -moz-column-gap: 24px;
          column-gap: 24px;
+    font-size: 1rem;
   }
 }
 .about .st > .tab-content .tab h3 {
