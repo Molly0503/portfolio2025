@@ -315,7 +315,7 @@ h2::before, h2::after {
 }
 .skill .accordion-unit {
   border: #82aaaa 1px solid;
-  border-radius: 8px;
+  border-radius: 16px;
   overflow: hidden;
 }
 .skill .accordion-title, .skill .accordion-content-inner {
@@ -337,12 +337,17 @@ h2::before, h2::after {
   font-weight: 500;
 }
 .skill .accordion-title p::after {
-  content: "\f150";
-  font-family: "Font Awesome 5 free";
-  width: 12px;
-  color: #82aaaa;
+  content: "\f282";
+  font-family: "bootstrap-icons";
+  background-color: #b0c9c9;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 1;
+  padding: 4px;
   position: absolute;
   right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 @media screen and (min-width: 768px) {
   .skill .accordion-title p::after {
@@ -350,7 +355,7 @@ h2::before, h2::after {
   }
 }
 .skill .accordion-title-active p::after {
-  transform: rotate(180deg);
+  transform: rotate(180deg) translateY(50%);
 }
 .skill .accordion-img {
   font-size: 2.25rem;
@@ -383,7 +388,7 @@ h2::before, h2::after {
   box-shadow: none;
 }
 .about .st-theme-basic > .nav .nav-link {
-  border-radius: 8px 8px 0 0;
+  border-radius: 16px 16px 0 0;
   color: #333;
   background-color: #ddd;
   font-size: 1.125rem;
@@ -407,7 +412,7 @@ h2::before, h2::after {
 .about .st > .tab-content .tab-pane {
   background-color: rgba(179, 208, 215, 0.3);
   padding: 16px;
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 16px 16px;
 }
 @media screen and (min-width: 768px) {
   .about .st > .tab-content .tab-pane {
@@ -417,17 +422,15 @@ h2::before, h2::after {
 .about .st > .tab-content .tab-inner {
   background-color: #fff;
   padding: 24px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: 1fr;
   row-gap: 36px;
   font-size: 0.875rem;
 }
 @media screen and (min-width: 768px) {
   .about .st > .tab-content .tab-inner {
-    flex-direction: row;
-    align-items: flex-start;
+    grid-template-columns: auto 1fr;
     -moz-column-gap: 24px;
          column-gap: 24px;
     font-size: 1rem;
@@ -445,6 +448,7 @@ h2::before, h2::after {
   width: 200px;
   height: auto;
   border-radius: 50%;
+  margin-inline: auto;
 }
 .about-top {
   margin-bottom: 8px;

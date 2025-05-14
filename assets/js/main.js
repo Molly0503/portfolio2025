@@ -46,7 +46,7 @@ $('.accordion-title').on('click', function (e) {
 
 const backToTop = $('.back-to-top');
 const position = 0;
-const speed = 600;
+const speed = 800;
 
 backToTop.on('click', function () {
 
