@@ -1,0 +1,76 @@
+@use '../foundation/variables'as v;
+
+.works {
+
+  &-item {
+    padding: 25px;
+    
+    @include v.mq() {
+      padding: 50px;
+    }
+  }
+  
+  img {
+    border-radius: 12px;
+    box-shadow: 5px 5px 5px 0 v.$c-sub;
+    position: relative;
+    margin-inline: auto;
+
+    @include v.mq() {
+      border-radius: 25px;
+    }
+  }
+
+  &-catch {
+    position: absolute;
+    right: 0;
+    bottom: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 8px;
+
+    @include v.mq() {
+      bottom: 70px;
+    }
+  }
+
+  &-text {
+    background-color: rgba($color: v.$c-main, $alpha: .9);
+    padding-inline: 16px;
+    padding-block: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: fit-content;
+    border-radius: 8px;
+    color: v.$c-white;
+    line-height: 1.2;
+
+    @include v.mq() {
+      padding-inline: 24px;
+      @include v.rem(24);
+    }
+
+    &-right {
+      align-items: flex-end;
+    }
+
+    .small {
+      @include v.rem(12);
+    }
+
+    a {
+      text-decoration: underline
+    }
+  }
+
+  &-bottom {
+    @include v.rem(18);
+
+    @include v.mq() {
+      @include v.rem(30);
+    }
+  }
+}
