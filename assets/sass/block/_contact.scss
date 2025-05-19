@@ -1,0 +1,42 @@
+@use '../foundation/variables'as v;
+
+.contact {
+  &-container {
+    text-align: center;
+  }
+
+  &-text {
+    margin-bottom: 24px;
+  }
+
+  &-sns-list {
+    li {
+      background-color: v.$c-main;
+      display: grid;
+      place-items: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+
+      &:hover {
+        background-color: v.$c-sub;
+      }
+    }
+
+    .fade-in-up {
+      opacity: 0;
+
+      &-1st {
+        animation-delay: .5s;
+      }
+
+      &-2nd {
+        animation-delay: 1s;
+      }
+
+      &-3rd {
+        animation-delay: 1.5s;
+      }
+    }
+  }
+}

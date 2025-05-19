@@ -1,0 +1,119 @@
+@use '../foundation/variables'as v;
+
+.header {
+  position: fixed;
+  z-index: 1;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  height: 66px;
+  background-color: v.$c-main;
+  box-shadow: 5px 5px 10px 5px v.$c-sub;
+  
+  color: v.$c-white;
+  padding-inline: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  @include v.mq() {
+    height: 80px;
+    padding-inline: 40px;
+  }
+  
+  h1 {
+    line-height: 1;
+    @include v.rem(24);
+    font-family: v.$f-en;
+  }
+  
+  i {
+    color: v.$c-white;
+  }
+  
+  &-menu {
+    @include v.mq(sp) {
+      position: fixed;
+      top: 88px;
+      left: 100%;
+      background-color: v.$c-main;
+      border-radius: 16px;
+      box-shadow: 5px 5px 10px 5px v.$c-sub;
+      padding: 48px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      row-gap: 40px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .6s;
+    }
+    
+    &-active {
+      left: 10px;
+      right: 10px;
+      opacity: 1;
+      visibility: visible;
+    }
+
+
+    &-list {
+      font-weight: bold;
+      line-height: 1;
+      @include v.rem(18);
+      display: flex;
+      flex-direction: column;
+      row-gap: 42px;
+
+
+      @include v.mq() {
+        flex-direction: row;
+        column-gap: 36px;
+        @include v.rem(15);
+      }
+    }
+  }
+
+  .hamburger-bottom {
+    @include v.mq() {
+      display: none;
+    }
+  }
+
+  .hamburger-button {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+
+    @include v.mq() {
+      display: none;
+    }
+
+    &:hover {
+      opacity: .8;
+    }
+
+    span {
+      background-color: v.$c-white;
+      width: 24px;
+      height: 2px;
+      transition: all .6s;
+    }
+
+    &-open {
+      span {
+        &:first-child {
+          transform: translateY(7px) rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:last-child {
+          transform: translateY(-7px) rotate(-45deg);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+@use '../foundation/variables'as v;
+
+.skill {
+  &-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 21px;
+  }
+
+  .accordion {
+    &-unit {
+      border: v.$c-main 1px solid;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    &-title,
+    &-content-inner {
+      padding-inline: 12px 40px;
+      padding-block: 24px;
+      position: relative;
+
+      @include v.mq() {
+        padding-left: 24px;
+      }
+    }
+
+
+    &-title {
+      cursor: pointer;
+      background-color: v.$c-white;
+      display: flex;
+      column-gap: 16px;
+      font-weight: 500;
+
+      p {
+
+        &::after {
+          content: "\F282";
+          font-family: "bootstrap-icons";
+          background-color: lighten(v.$c-main, 15%);
+          border-radius: 50%;
+          color: v.$c-white;
+          line-height: 1;
+          padding: 4px;
+          position: absolute;
+          right: 12px;
+          top: 50%;
+          transform: translateY(-50%);
+
+          @include v.mq() {
+            right: 24px;
+          }
+        }
+      }
+
+      &-active p::after {
+        transform: rotate(180deg) translateY(50%);
+      }
+    }
+
+    &-img {
+      @include v.rem(36);
+      color: v.$c-main;
+      line-height: 1;
+    }
+
+
+    &-content {
+      background-color: v.$c-main;
+      color: v.$c-white;
+      display: none;
+    }
+  }
+}

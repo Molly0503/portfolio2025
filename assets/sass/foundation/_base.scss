@@ -1,0 +1,76 @@
+@use './variables'as v;
+
+// ----------------------------------
+// baseスタイル
+// ----------------------------------
+body {
+  font-family: v.$f-main;
+  @include v.rem(16);
+  font-weight: 400;
+  line-height: v.$lh-main;
+  color: v.$c-black;
+}
+
+a,
+a i {
+  color: v.$c-white;
+  text-decoration: none;
+}
+
+a:hover,
+a i:hover {
+  opacity: .8;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+ul {
+  list-style: none;
+}
+
+.sns-list {
+  display: flex;
+  column-gap: 40px;
+  justify-content: center;
+
+  .bi {
+    @include v.rem(36);
+    line-height: 1;
+  }
+}
+
+h2 {
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 12px;
+  margin-bottom: 32px;
+  font-family: v.$f-en;
+
+  @include v.mq() {
+    @include v.rem(36);
+    row-gap: 25px;
+    margin-bottom: 39px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    background-color: v.$c-main;
+    width: 30px;
+    height: 2px;
+
+    @include v.mq() {
+      width: 50px;
+    }
+  }
+}
+
+.section-bg {
+  background-color: rgba($color: v.$c-main-right, $alpha: .3);
+}

@@ -1,0 +1,27 @@
+@use '../foundation/variables'as v;
+
+// -----------------------------------
+// Container
+// -----------------------------------
+
+.l-container {
+  padding-block: 80px;
+  padding-inline: 16px;
+  
+  @include v.mq(pc) {
+    padding-block: 110px 95px;
+  }
+  
+  &--narrowPb {
+    padding-block: 32px;
+    
+    @include v.mq() {
+      padding-block: 40px;
+    }
+  }
+}
+
+.l-inner {
+  max-width: v.$width-main;
+  margin: 0 auto;
+}

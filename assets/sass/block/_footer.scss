@@ -1,0 +1,23 @@
+@use '../foundation/variables'as v;
+
+.footer {
+  text-align: center;
+  font-family: v.$f-en;
+  background-color: v.$c-footer-bg;
+  @include v.rem(12);
+  color: v.$c-copyright;
+}
+
+.back-to-top {
+  background-color: v.$c-sub;
+  text-align: center;
+  padding-block: .5rem;
+}
+
+.page-top {
+  color: v.$c-white;
+
+  &:hover {
+    color: v.$c-black;
+  }
+}
